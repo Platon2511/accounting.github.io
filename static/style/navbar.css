@@ -1,0 +1,141 @@
+.navbar_left {
+    display: flex;
+    background-color: rgb(129, 203, 232);
+
+}
+
+.navbar_left>a>img {
+    width: 41px;
+    height: 41px;
+    border: none;
+    margin-top: 5px;
+    padding-left: 8px;
+}
+
+.navbar_right {
+    display: flex;
+    background-color: rgb(120, 12, 100);
+
+}
+
+.nav-list_left,
+.nav-list_right {
+    display: flex;
+}
+
+.nav-list_left a {
+    display: block;
+    padding: 1em;
+    color: rgb(120, 12, 100);
+    /*цвет шрифта*/
+    text-decoration: none;
+    /*убирает подчеркивание */
+}
+
+.nav-list_right a {
+    display: block;
+    padding: 1em;
+    color: rgb(129, 203, 232);
+    /*цвет шрифта*/
+    text-decoration: none;
+    /*убирает подчеркивание */
+}
+
+.nav-list_left a:hover {
+    /*(:hover) псевдо класс, записывается через двоеточие без пробела, изменяет фон ссылки при наведении курсора*/
+    background-color: rgb(120, 12, 100);
+    color: rgb(129, 203, 232);
+
+}
+
+.nav-list_right a:hover {
+    /*(:hover) псевдо класс, записывается через двоеточие без пробела, изменяет фон ссылки при наведении курсора*/
+    background-color: rgb(168, 153, 165);
+    color: rgb(120, 12, 100);
+
+}
+
+.nav-btn_left,
+.nav-btn_right {
+    display: none;
+    /* justify-content: flex-end; */
+    /*justify-content: определяет как будут расположены элементы контента в блоке flex*/
+}
+
+@media(max-width: 750px) {
+    .nav-btn_left {
+        font-size: 1.5em;
+        /*изменяем размер шрифта, чтобы увеличить размер кнопки*/
+        background-color: rgb(129, 203, 232);
+        border: none;
+        margin-left: 10px;
+        padding-inline: 10px;
+        color: rgb(120, 12, 100);
+        display: block;
+margin-top: 8px;
+    }
+
+    .nav-btn_right {
+        font-size: 1.5em;
+        /*изменяем размер шрифта, чтобы увеличить размер кнопки*/
+        background-color: rgb(120, 12, 100);
+        border: none;
+        margin-left: 10px;
+        padding-inline: 10px;
+        color: rgb(129, 203, 232);
+        display: block;
+
+    }
+
+    .nav-btn_left:hover {
+        background-color: rgb(120, 12, 100);
+        color: rgb(129, 203, 232);
+
+    }
+
+    .nav-btn_right:hover {
+        background-color: rgb(129, 203, 232);
+        color: rgb(120, 12, 100);
+
+    }
+
+
+    .nav-list_left,
+    .nav-list_right {
+        display: none;
+
+    }
+
+    .drob:hover .nav-list_left {
+        display: block;
+        position: absolute;
+        /*данное свойство позволяет не выделять нового пространства для блока (display: block;), распогая его под ближайшим блоком (предком). После этого данный блок становиться как по верх контента идущих за ним блоков*/
+        background-color: rgb(129, 203, 232);
+        right: 1px;
+
+    }
+
+    .drob:hover .nav-list_right {
+        display: block;
+        position: absolute;
+        /*данное свойство позволяет не выделять нового пространства для блока (display: block;), распогая его под ближайшим блоком (предком). После этого данный блок становиться как по верх контента идущих за ним блоков*/
+        background-color: rgb(120, 12, 100);
+        right: 1px;
+
+    }
+
+    .navbar_left {
+        justify-content: space-between;
+
+    }
+
+    .navbar_right {
+        justify-content: end;
+    }
+
+
+    /* .navbar {
+        justify-content: space-between; */
+    /*justify-content: определяет как будут расположены элементы контента в блоке flex*/
+}
+}
